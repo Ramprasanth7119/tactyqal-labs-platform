@@ -7,6 +7,8 @@ My submission for the Tactyqal Labs **Full Stack Developer Intern** hire-a-thon 
 
 Both live in **one Next.js codebase**. Today the main site is CodeIgniter and the blog is a separate WordPress install; on 19 Nov 2026 `tactyqal.com/blog/` and its REST API returned HTTP 500. Putting both in one app means one deploy, one design system and one data layer. The homepage reads its "latest posts" straight from the blog database.
 
+> **Live demo:** https://tactyqal-labs-platform.vercel.app · [Blog](https://tactyqal-labs-platform.vercel.app/blog) · [API docs](https://tactyqal-labs-platform.vercel.app/api-docs)
+>
 > Video walkthrough: _add link here_
 
 ## What's inside
@@ -86,6 +88,8 @@ npm run dev          # http://localhost:3000
 1. Create a Turso database.
 2. Set `DATABASE_URL`, `DATABASE_AUTH_TOKEN`, `ADMIN_API_KEY`, `ADMIN_PASSWORD`, `SESSION_SECRET` and `NEXT_PUBLIC_SITE_URL`.
 3. Run `npm run setup` once against it, then deploy to Vercel or any Node host.
+
+Without `DATABASE_URL`, a Vercel deploy runs in **demo mode**: a temporary SQLite database in `/tmp` is created and seeded on each cold start. Edits are not permanent there, so use Turso for real use.
 
 ## Project layout
 ```
