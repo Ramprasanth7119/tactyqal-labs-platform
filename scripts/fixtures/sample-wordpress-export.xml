@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Small hand-written WXR fixture for testing the importer. Not a real export. -->
+<rss version="2.0"
+  xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:wp="http://wordpress.org/export/1.2/">
+<channel>
+  <title>Sample WordPress Blog</title>
+  <link>https://old.example.com</link>
+  <wp:wxr_version>1.2</wp:wxr_version>
+
+  <wp:author>
+    <wp:author_id>1</wp:author_id>
+    <wp:author_login><![CDATA[editor]]></wp:author_login>
+    <wp:author_display_name><![CDATA[Priya Editor]]></wp:author_display_name>
+  </wp:author>
+
+  <item>
+    <title>Why every student founder needs a prototype</title>
+    <link>https://old.example.com/why-every-student-founder-needs-a-prototype/</link>
+    <dc:creator><![CDATA[editor]]></dc:creator>
+    <content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>A <strong>prototype</strong> answers questions a pitch deck cannot. Read <a href="https://example.com/guide">our guide</a> for more.</p>
+<!-- /wp:paragraph -->
+<h2>Three quick wins</h2>
+<ul><li>Sketch the main screen</li><li>Test it with five users</li><li>Write down what surprised you</li></ul>
+<p>Tom &amp; Jerry would approve.<script>alert('xss')</script></p>]]></content:encoded>
+    <excerpt:encoded><![CDATA[Prototypes beat pitch decks.]]></excerpt:encoded>
+    <wp:post_id>101</wp:post_id>
+    <wp:post_date><![CDATA[2024-02-10 10:00:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2024-02-10 04:30:00]]></wp:post_date_gmt>
+    <wp:post_name><![CDATA[why-every-student-founder-needs-a-prototype]]></wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_type><![CDATA[post]]></wp:post_type>
+    <category domain="category" nicename="entrepreneurship"><![CDATA[Entrepreneurship]]></category>
+    <category domain="post_tag" nicename="prototyping"><![CDATA[prototyping]]></category>
+    <category domain="post_tag" nicename="students"><![CDATA[students]]></category>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+      <wp:meta_value><![CDATA[900]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title>Draft: notes on pricing</title>
+    <link>https://old.example.com/?p=102</link>
+    <dc:creator><![CDATA[editor]]></dc:creator>
+    <content:encoded><![CDATA[<p>Work in progress.</p>]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>102</wp:post_id>
+    <wp:post_date><![CDATA[2024-03-01 09:00:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[0000-00-00 00:00:00]]></wp:post_date_gmt>
+    <wp:post_name><![CDATA[]]></wp:post_name>
+    <wp:status><![CDATA[draft]]></wp:status>
+    <wp:post_type><![CDATA[post]]></wp:post_type>
+  </item>
+
+  <item>
+    <title>Launching in the future</title>
+    <link>https://old.example.com/launching-in-the-future/</link>
+    <dc:creator><![CDATA[editor]]></dc:creator>
+    <content:encoded><![CDATA[<p>1. First step.</p><ol><li>Plan</li><li>Build</li></ol><pre><code>npm run build</code></pre>]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>103</wp:post_id>
+    <wp:post_date_gmt><![CDATA[2099-01-01 09:00:00]]></wp:post_date_gmt>
+    <wp:post_name><![CDATA[launching-in-the-future]]></wp:post_name>
+    <wp:status><![CDATA[future]]></wp:status>
+    <wp:post_type><![CDATA[post]]></wp:post_type>
+    <category domain="category" nicename="news"><![CDATA[News]]></category>
+  </item>
+
+  <item>
+    <title>About us</title>
+    <link>https://old.example.com/about/</link>
+    <wp:post_id>104</wp:post_id>
+    <wp:post_name><![CDATA[about]]></wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_type><![CDATA[page]]></wp:post_type>
+  </item>
+
+  <item>
+    <title>cover.jpg</title>
+    <wp:post_id>900</wp:post_id>
+    <wp:post_type><![CDATA[attachment]]></wp:post_type>
+    <wp:attachment_url><![CDATA[https://old.example.com/wp-content/uploads/cover.jpg]]></wp:attachment_url>
+  </item>
+
+  <item>
+    <title>Thrown away</title>
+    <wp:post_id>105</wp:post_id>
+    <wp:post_name><![CDATA[thrown-away]]></wp:post_name>
+    <wp:status><![CDATA[trash]]></wp:status>
+    <wp:post_type><![CDATA[post]]></wp:post_type>
+  </item>
+</channel>
+</rss>

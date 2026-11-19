@@ -1,0 +1,17 @@
+/* Minimal article styles for the editor live preview. */
+.admin-preview { font-size: 0.95rem; line-height: 1.7; overflow-wrap: anywhere; }
+.admin-preview > * + * { margin-top: 0.9em; }
+.admin-preview h1, .admin-preview h2, .admin-preview h3 { font-weight: 800; line-height: 1.2; margin-top: 1.4em; }
+.admin-preview h1 { font-size: 1.5rem; }
+.admin-preview h2 { font-size: 1.25rem; }
+.admin-preview h3 { font-size: 1.1rem; }
+.admin-preview ul { list-style: disc; padding-left: 1.4em; }
+.admin-preview ol { list-style: decimal; padding-left: 1.4em; }
+.admin-preview a { color: var(--color-accent-deep); text-decoration: underline; }
+.admin-preview blockquote { border-left: 4px solid var(--color-accent); padding-left: 1em; font-style: italic; }
+.admin-preview code { background: var(--color-sand); padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.9em; }
+.admin-preview pre { background: var(--color-ink); color: var(--color-cream); padding: 0.9em 1em; border-radius: 10px; overflow-x: auto; }
+.admin-preview pre code { background: none; padding: 0; }
+.admin-preview img { max-width: 100%; border-radius: 10px; }
+.admin-preview table { display: block; overflow-x: auto; border-collapse: collapse; }
+.admin-preview th, .admin-preview td { border: 1px solid var(--color-line); padding: 0.4em 0.7em; }
