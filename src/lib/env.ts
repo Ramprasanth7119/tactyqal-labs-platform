@@ -29,13 +29,15 @@ function secret(name: SecretName): string | undefined {
 
 export const env = {
   get databaseUrl() {
-    if (process.env.DATABASE_URL) return process.env.DATABASE_URL;
+    // TURSO_* are the names the Vercel Marketplace Turso integration sets.
+    const configured = process.env.DATABASE_URL || process.env.TURSO_DATABASE_URL;
+    if (configured) return configured;
     // Vercel's filesystem is read-only except /tmp. Without a configured database, run an
     // ephemeral demo database there (re-seeded on each cold start; writes do not persist).
     return process.env.VERCEL ? "file:/tmp/blog.db" : "file:./data/blog.db";
   },
   get databaseAuthToken() {
-    return process.env.DATABASE_AUTH_TOKEN || undefined;
+    return process.env.DATABASE_AUTH_TOKEN || process.env.TURSO_AUTH_TOKEN || undefined;
   },
   get adminApiKey() {
     return secret("ADMIN_API_KEY");
@@ -51,7 +53,7 @@ export const env = {
   },
   /** True when running the throwaway /tmp database on Vercel (no DATABASE_URL set). */
   get isEphemeralDemoDb() {
-    return !process.env.DATABASE_URL && !!process.env.VERCEL;
+    return !process.env.DATABASE_URL && !process.env.TURSO_DATABASE_URL && !!process.env.VERCEL;
   },
   get isProd() {
     return isProd;

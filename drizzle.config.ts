@@ -6,7 +6,7 @@ try {
   /* no .env file: fall back to defaults */
 }
 
-const url = process.env.DATABASE_URL ?? "file:./data/blog.db";
+const url = process.env.DATABASE_URL ?? process.env.TURSO_DATABASE_URL ?? "file:./data/blog.db";
 const isRemote = /^(libsql|https?|wss?):/.test(url);
 
 export default defineConfig({
@@ -14,6 +14,6 @@ export default defineConfig({
   schema: "./src/lib/db/schema.ts",
   out: "./drizzle",
   dbCredentials: isRemote
-    ? { url, authToken: process.env.DATABASE_AUTH_TOKEN ?? "" }
+    ? { url, authToken: process.env.DATABASE_AUTH_TOKEN ?? process.env.TURSO_AUTH_TOKEN ?? "" }
     : { url },
 });

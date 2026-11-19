@@ -5,7 +5,7 @@ import path from "node:path";
 
 async function main() {
   process.env.AUTO_SEED = "false";
-  const url = process.env.DATABASE_URL || "file:./data/blog.db";
+  const url = process.env.DATABASE_URL || process.env.TURSO_DATABASE_URL || "file:./data/blog.db";
   if (!url.startsWith("file:")) {
     console.error("db:reset only works on a local SQLite file. Refusing to wipe a remote database.");
     process.exit(1);
