@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Migrations are read from disk at runtime; ship them with every server function.
+  outputFileTracingIncludes: { "/**": ["./drizzle/**/*"] },
+  serverExternalPackages: ["@libsql/client", "libsql"],
 };
 
 export default nextConfig;

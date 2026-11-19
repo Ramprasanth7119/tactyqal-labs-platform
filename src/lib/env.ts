@@ -29,7 +29,10 @@ function secret(name: SecretName): string | undefined {
 
 export const env = {
   get databaseUrl() {
-    return process.env.DATABASE_URL || "file:./data/blog.db";
+    if (process.env.DATABASE_URL) return process.env.DATABASE_URL;
+    // Vercel's filesystem is read-only except /tmp. Without a configured database, run an
+    // ephemeral demo database there (re-seeded on each cold start; writes do not persist).
+    return process.env.VERCEL ? "file:/tmp/blog.db" : "file:./data/blog.db";
   },
   get databaseAuthToken() {
     return process.env.DATABASE_AUTH_TOKEN || undefined;
@@ -45,6 +48,10 @@ export const env = {
   },
   get siteUrl() {
     return (process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000").replace(/\/$/, "");
+  },
+  /** True when running the throwaway /tmp database on Vercel (no DATABASE_URL set). */
+  get isEphemeralDemoDb() {
+    return !process.env.DATABASE_URL && !!process.env.VERCEL;
   },
   get isProd() {
     return isProd;
