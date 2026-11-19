@@ -32,10 +32,11 @@ function open(): State {
   // Migrate, then (development only by default) seed an empty database on first run.
   state.ready = (async () => {
     await state.migrated;
-    const autoSeed =
-      process.env.AUTO_SEED ??
-      (process.env.NODE_ENV === "development" || env.isEphemeralDemoDb ? "true" : "false");
-    if (autoSeed !== "true") return;
+    const flag = process.env.AUTO_SEED?.trim().toLowerCase();
+    const autoSeed = flag
+      ? ["true", "1", "yes"].includes(flag)
+      : process.env.NODE_ENV === "development" || env.isEphemeralDemoDb;
+    if (!autoSeed) return;
     const [{ n }] = await db.select({ n: count() }).from(schema.posts);
     if (n > 0) return;
     state.seeding = true; // the seeder itself calls getDb(); it must not wait on this promise
