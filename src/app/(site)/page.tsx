@@ -20,7 +20,7 @@ export default async function HomePage() {
     // Never let a slow or unavailable blog database hold up the homepage.
     posts = await Promise.race([
       getLatestPosts(3),
-      new Promise<PostSummary[]>((resolve) => setTimeout(() => resolve([]), 4000)),
+      new Promise<PostSummary[]>((resolve) => setTimeout(() => resolve([]), 12000)),
     ]);
   } catch {
     posts = [];
