@@ -11,7 +11,7 @@ Both live in **one Next.js codebase**. Today the main site is CodeIgniter and th
 >
 > **Try the admin:** [/admin](https://tactyqal-labs-platform.vercel.app/admin), password `demo-password` (demo account; please don't delete the sample posts)
 >
-> **Video walkthrough:** https://drive.google.com/file/d/1Fwf8Mkn0sb-1p8gZwb8GfZh4mx7mqgZl/view?usp=sharing
+> **Video walkthrough (2 min):** https://youtu.be/AI4Dt8VOJHE
 
 ## What's inside
 
