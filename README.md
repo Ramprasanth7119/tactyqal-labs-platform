@@ -9,6 +9,8 @@ Both live in **one Next.js codebase**. Today the main site is CodeIgniter and th
 
 > **Live demo:** https://tactyqal-labs-platform.vercel.app · [Blog](https://tactyqal-labs-platform.vercel.app/blog) · [API docs](https://tactyqal-labs-platform.vercel.app/api-docs)
 >
+> **Try the admin:** [/admin](https://tactyqal-labs-platform.vercel.app/admin), password `demo-password` (demo account; please don't delete the sample posts)
+>
 > **Video walkthrough:** https://drive.google.com/file/d/1Fwf8Mkn0sb-1p8gZwb8GfZh4mx7mqgZl/view?usp=sharing
 
 ## What's inside
